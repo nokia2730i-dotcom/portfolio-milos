@@ -6,6 +6,7 @@ const labels   = ['Intro', 'O meni', 'Usluge', 'Projekti', 'Canva', 'Reels', 'AI
 
 export default function Nav() {
   const [active, setActive] = useState('cover')
+  const [pdfLoading, setPdfLoading] = useState(false)
 
   useEffect(() => {
     const obs = new IntersectionObserver(
@@ -23,8 +24,16 @@ export default function Nav() {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 
   const handlePDF = async () => {
-    const { downloadPDF } = await import('./PDFExport')
-    downloadPDF()
+    if (pdfLoading) return
+    setPdfLoading(true)
+    try {
+      const { downloadPDF } = await import('./PDFExport')
+      await downloadPDF()
+    } catch (err) {
+      console.error('PDF generation failed:', err)
+    } finally {
+      setPdfLoading(false)
+    }
   }
 
   return (
@@ -81,6 +90,7 @@ export default function Nav() {
 
       <button
         onClick={handlePDF}
+        disabled={pdfLoading}
         className="nav-pdf-only"
         style={{
           fontFamily: 'var(--font-syne), Syne, sans-serif',
@@ -93,11 +103,13 @@ export default function Nav() {
           border: '1px solid #c0392b',
           background: '#c0392b',
           color: '#fff',
-          cursor: 'pointer',
+          cursor: pdfLoading ? 'wait' : 'pointer',
           flexShrink: 0,
+          opacity: pdfLoading ? 0.7 : 1,
+          transition: 'opacity 0.2s',
         }}
       >
-        PDF ↓
+        {pdfLoading ? 'Generišem...' : 'PDF ↓'}
       </button>
     </nav>
   )

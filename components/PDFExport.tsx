@@ -119,16 +119,29 @@ export const PortfolioPDF = () => (
       </View>
     </Page>
 
-    {/* 04b PROJEKTI — SAJTOVI + CONTENT */}
+    {/* 04b PROJEKTI — SEO BLOG + SAJTOVI + CONTENT */}
     <Page size="A4" style={S.page}>
       <Text style={S.eye}>Projekti (nastavak) · 04</Text>
+
+      <View style={[S.dark, { marginBottom: 14 }]}>
+        <Text style={S.badge}>SEO BLOG · FEATURED</Text>
+        <Text style={[S.ctitle, { color: '#fff', fontSize: 14, marginBottom: 6 }]}>Linkversity.hr — SEO Blog Pisanje</Text>
+        <Text style={[S.cbody, { color: 'rgba(255,255,255,0.72)', marginBottom: 8 }]}>
+          SEO-optimizovani blog postovi na hrvatskom tržištu za platformu Linkversity. Tematike: turizam, putovanja, lifestyle. Svaki post pisan po SEO pravilima — title tag, meta opis, interne veze, keyword distribucija.
+        </Text>
+        <Text style={{ fontSize: 8, color: 'rgba(255,255,255,0.45)', marginBottom: 3 }}>· Najljepši nacionalni parkovi Hrvatske</Text>
+        <Text style={{ fontSize: 8, color: 'rgba(255,255,255,0.45)', marginBottom: 3 }}>· TripAdvisor recenzije: vodič za putovanje</Text>
+        <Text style={{ fontSize: 8, color: 'rgba(255,255,255,0.45)', marginBottom: 8 }}>· Putovanje sa BlaBlaCarom</Text>
+        <Text style={[S.meta, { color: 'rgba(255,255,255,0.35)' }]}>linkversity.hr · SEO copywriting · HR tržište · WordPress · Turizam & lifestyle</Text>
+      </View>
+
       {[
         ['WORDPRESS', 'Glamorous Paws', 'Salon za negu pasa — kompletan WordPress sajt, 3 SEO blog posta, 2 lokacije. Klijent ga sam ažurira.', 'glamorous-paws.com'],
         ['WORDPRESS', 'Tehnički Pregled XL', 'Servis za registraciju vozila — WordPress, kalkulator registracije, FAQ, mobile-first dizajn.', 'tehnickipregled-xl.rs'],
         ['AI CONTENT', 'YouTube AI Muzika', 'Originalni kanal sa Suno AI mediteranskom muzikom. Greek pop niche, Shorts format.', 'youtube.com/@milosstamenkovic888'],
         ['SOCIAL MEDIA', '@konobarignite', 'Lični brend na raskrsnici ugostiteljstva i digitalnog marketinga. Reels, niche content.', 'instagram.com/konobarignite'],
       ].map(([type, title, body, url]) => (
-        <View key={title} style={[S.card, { marginBottom: 14 }]}>
+        <View key={title} style={[S.card, { marginBottom: 10 }]}>
           <Text style={S.badge}>{type}</Text>
           <Text style={S.ctitle}>{title}</Text>
           <Text style={S.cbody}>{body}</Text>

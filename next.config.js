@@ -4,5 +4,8 @@ const nextConfig = {
     config.resolve.alias = { ...config.resolve.alias, canvas: false }
     return config
   },
+  experimental: {
+    serverComponentsExternalPackages: ['@react-pdf/renderer'],
+  },
 }
 module.exports = nextConfig
