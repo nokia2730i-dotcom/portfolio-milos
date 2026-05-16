@@ -103,11 +103,11 @@ export default function Canva() {
               </div>
               <div style={{ height: 3, background: 'var(--paper-3)', borderRadius: 2 }}>
                 <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${s.pct}%` }}
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.9, delay: 0.3 + i * 0.1 }}
-                  style={{ height: 3, background: 'var(--ink)', borderRadius: 2 }}
+                  style={{ height: 3, background: 'var(--ink)', borderRadius: 2, width: `${s.pct}%`, transformOrigin: 'left' }}
                 />
               </div>
             </motion.div>

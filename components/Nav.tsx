@@ -1,32 +1,5 @@
 'use client'
 import { useState, useEffect } from 'react'
-import dynamic from 'next/dynamic'
-
-// Loaded only in the browser — keeps @react-pdf/renderer out of the server bundle entirely
-const PDFButton = dynamic(() => import('./PDFButton'), {
-  ssr: false,
-  loading: () => (
-    <button
-      style={{
-        fontFamily: 'var(--font-syne), Syne, sans-serif',
-        fontSize: 10,
-        fontWeight: 700,
-        letterSpacing: '0.08em',
-        textTransform: 'uppercase',
-        padding: '5px 14px',
-        borderRadius: 2,
-        border: '1px solid #c0392b',
-        background: '#c0392b',
-        color: '#fff',
-        flexShrink: 0,
-        opacity: 0.5,
-        cursor: 'default',
-      }}
-    >
-      PDF ↓
-    </button>
-  ),
-})
 
 const sections = ['cover', 'about', 'services', 'work', 'canva', 'reels', 'ai', 'process', 'reviews', 'contact']
 const labels   = ['Intro', 'O meni', 'Usluge', 'Projekti', 'Canva', 'Reels', 'AI', 'Proces', 'Reference', 'Kontakt']
@@ -101,7 +74,25 @@ export default function Nav() {
         ))}
       </div>
 
-      <PDFButton />
+      <button
+        onClick={() => window.print()}
+        style={{
+          fontFamily: 'var(--font-syne), Syne, sans-serif',
+          fontSize: 10,
+          fontWeight: 700,
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase',
+          padding: '5px 14px',
+          borderRadius: 2,
+          border: '1px solid #c0392b',
+          background: '#c0392b',
+          color: '#fff',
+          cursor: 'pointer',
+          flexShrink: 0,
+        }}
+      >
+        PDF ↓
+      </button>
     </nav>
   )
 }
