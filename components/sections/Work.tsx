@@ -1,7 +1,21 @@
 'use client'
 import { motion } from 'framer-motion'
 
-const featured = [
+type Blog = { label: string; href: string }
+
+type FeaturedProject = {
+  badge: string
+  url: string
+  bg: string
+  title: string
+  sub: string
+  body: string
+  features?: string[]
+  blogs?: Blog[]
+  kpi: string
+}
+
+const featured: FeaturedProject[] = [
   {
     badge: 'WEB APP · FEATURED',
     url: 'https://fodcost-analiza.vercel.app/',
@@ -33,6 +47,20 @@ const featured = [
       'Dinamično dodavanje troškova',
     ],
     kpi: 'Vercel · PDF Export · 4 valute · 3 jezika · PDV logika',
+  },
+  {
+    badge: 'SEO BLOG · FEATURED',
+    url: 'https://linkversity.hr/blog/author/milos/',
+    bg: '#1a0a14',
+    title: 'Linkversity.hr — SEO Blog Pisanje',
+    sub: 'SEO copywriting · HR tržište · WordPress · Turizam & lifestyle',
+    body: 'SEO-optimizovani blog postovi na hrvatskom tržištu za platformu Linkversity. Tematike: turizam, putovanja, lifestyle. Svaki post pisan po SEO pravilima — title tag, meta opis, interne veze, keyword distribucija.',
+    blogs: [
+      { label: '"Najljepši nacionalni parkovi Hrvatske"', href: 'https://linkversity.hr/blog/nacionalni-parkovi-hrvatske-otkrijte-prirodne-ljepote/' },
+      { label: '"TripAdvisor recenzije: vodič za putovanje"', href: 'https://linkversity.hr/blog/tripadvisor-recenzije-vodic-za-putovanje/' },
+      { label: '"Putovanje sa BlaBlaCarom"', href: 'https://linkversity.hr/blog/blablacar-sigurnost-iskustvo-dijeljenje-voznje/' },
+    ],
+    kpi: 'SEO copywriting · HR tržište · WordPress · Turizam & lifestyle',
   },
 ]
 
@@ -80,6 +108,17 @@ const standard = [
   },
 ]
 
+const featuredCardStyle = (bg: string): React.CSSProperties => ({
+  display: 'block',
+  background: bg,
+  borderRadius: 4,
+  padding: '36px 32px',
+  marginBottom: 16,
+  cursor: 'pointer',
+  border: '1px solid transparent',
+  transition: 'border-color 0.2s',
+})
+
 export default function Work() {
   return (
     <section id="work" style={{ background: 'var(--paper-2)', padding: '80px 24px' }}>
@@ -99,27 +138,15 @@ export default function Work() {
 
         {/* Featured projects */}
         {featured.map((p, i) => (
-          <motion.a
+          <motion.div
             key={p.title}
-            href={p.url}
-            target="_blank"
-            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            whileHover={{ outline: '1px solid #c0392b' }}
-            style={{
-              display: 'block',
-              background: p.bg,
-              borderRadius: 4,
-              padding: '36px 32px',
-              marginBottom: 16,
-              textDecoration: 'none',
-              cursor: 'pointer',
-              border: '1px solid transparent',
-              transition: 'border-color 0.2s',
-            }}
+            whileHover={{ borderColor: '#c0392b' }}
+            style={featuredCardStyle(p.bg)}
+            onClick={() => window.open(p.url, '_blank')}
           >
             <p className="badge">{p.badge}</p>
             <h3
@@ -148,24 +175,59 @@ export default function Work() {
             <p style={{ fontSize: 14, lineHeight: 1.8, color: 'rgba(255,255,255,0.72)', marginBottom: 20, maxWidth: 680 }}>
               {p.body}
             </p>
-            <ul style={{ marginBottom: 20, paddingLeft: 0, listStyle: 'none' }}>
-              {p.features.map((f) => (
-                <li
-                  key={f}
-                  style={{
-                    fontSize: 13,
-                    color: 'rgba(255,255,255,0.52)',
-                    marginBottom: 5,
-                    display: 'flex',
-                    alignItems: 'flex-start',
-                    gap: 8,
-                  }}
-                >
-                  <span style={{ color: 'var(--red)', flexShrink: 0, marginTop: 1 }}>·</span>
-                  {f}
-                </li>
-              ))}
-            </ul>
+
+            {/* Bullet features */}
+            {p.features && p.features.length > 0 && (
+              <ul style={{ marginBottom: 20, paddingLeft: 0, listStyle: 'none' }}>
+                {p.features.map((f) => (
+                  <li
+                    key={f}
+                    style={{
+                      fontSize: 13,
+                      color: 'rgba(255,255,255,0.52)',
+                      marginBottom: 5,
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      gap: 8,
+                    }}
+                  >
+                    <span style={{ color: 'var(--red)', flexShrink: 0, marginTop: 1 }}>·</span>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {/* Blog post links (clickable, stop propagation so they don't trigger card click) */}
+            {p.blogs && p.blogs.length > 0 && (
+              <div style={{ marginBottom: 20 }}>
+                {p.blogs.map((b) => (
+                  <a
+                    key={b.href}
+                    href={b.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 8,
+                      fontSize: 13,
+                      color: 'rgba(255,255,255,0.7)',
+                      textDecoration: 'none',
+                      marginBottom: 8,
+                      transition: 'color 0.15s',
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
+                  >
+                    <span style={{ color: 'var(--red)' }}>·</span>
+                    {b.label} ↗
+                  </a>
+                ))}
+              </div>
+            )}
+
             <p
               style={{
                 fontSize: 9,
@@ -178,7 +240,7 @@ export default function Work() {
             >
               {p.kpi}
             </p>
-          </motion.a>
+          </motion.div>
         ))}
 
         {/* Standard 2-col grid */}

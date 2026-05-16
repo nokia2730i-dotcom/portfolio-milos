@@ -25,11 +25,12 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        {/* 3 contact cards */}
-        <div className="grid-3col" style={{ marginBottom: 16 }}>
+        {/* 4 contact cards */}
+        <div className="grid-2col" style={{ marginBottom: 16 }}>
           {[
             { label: 'Instagram', val: '@konobarignite', href: 'https://www.instagram.com/konobarignite/' },
             { label: 'YouTube', val: '@milosstamenkovic888', href: 'https://www.youtube.com/@milosstamenkovic888' },
+            { label: 'Linkversity Blog', val: 'linkversity.hr/blog/author/milos', href: 'https://linkversity.hr/blog/author/milos/' },
             { label: 'Odziv', val: 'U roku od 24h radnim danima', href: null },
           ].map((c, i) => (
             <motion.div

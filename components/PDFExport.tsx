@@ -40,9 +40,9 @@ export const PortfolioPDF = () => (
       <Text style={S.body}>Kreiram sadržaj koji radi posao i alate koji rešavaju probleme — short-form video, Canva sistemi, Reels, WordPress sajtovi i web aplikacije na Vercelu.</Text>
       <View style={S.div} />
       <View style={S.row3}>
-        <View style={S.sbox}><Text style={S.snum}>5+</Text><Text style={S.slbl}>Godina iskustva</Text></View>
-        <View style={S.sbox}><Text style={S.snum}>6</Text><Text style={S.slbl}>Realizovana projekta</Text></View>
-        <View style={S.sbox}><Text style={S.snum}>3M+</Text><Text style={S.slbl}>Organski reach</Text></View>
+        <View style={S.sbox}><Text style={S.snum}>3+</Text><Text style={S.slbl}>Godina iskustva</Text></View>
+        <View style={S.sbox}><Text style={S.snum}>7</Text><Text style={S.slbl}>Realizovana projekta</Text></View>
+        <View style={S.sbox}><Text style={S.snum}>10+</Text><Text style={S.slbl}>Blog postova</Text></View>
       </View>
       <View style={S.div} />
       <Text style={{ fontSize: 9, color: '#888888' }}>instagram.com/konobarignite  ·  youtube.com/@milosstamenkovic888</Text>
