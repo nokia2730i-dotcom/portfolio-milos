@@ -1,12 +1,38 @@
 'use client'
 import { useState, useEffect } from 'react'
+import dynamic from 'next/dynamic'
+
+// Loaded only in the browser — keeps @react-pdf/renderer out of the server bundle entirely
+const PDFButton = dynamic(() => import('./PDFButton'), {
+  ssr: false,
+  loading: () => (
+    <button
+      style={{
+        fontFamily: 'var(--font-syne), Syne, sans-serif',
+        fontSize: 10,
+        fontWeight: 700,
+        letterSpacing: '0.08em',
+        textTransform: 'uppercase',
+        padding: '5px 14px',
+        borderRadius: 2,
+        border: '1px solid #c0392b',
+        background: '#c0392b',
+        color: '#fff',
+        flexShrink: 0,
+        opacity: 0.5,
+        cursor: 'default',
+      }}
+    >
+      PDF ↓
+    </button>
+  ),
+})
 
 const sections = ['cover', 'about', 'services', 'work', 'canva', 'reels', 'ai', 'process', 'reviews', 'contact']
 const labels   = ['Intro', 'O meni', 'Usluge', 'Projekti', 'Canva', 'Reels', 'AI', 'Proces', 'Reference', 'Kontakt']
 
 export default function Nav() {
   const [active, setActive] = useState('cover')
-  const [pdfLoading, setPdfLoading] = useState(false)
 
   useEffect(() => {
     const obs = new IntersectionObserver(
@@ -22,19 +48,6 @@ export default function Nav() {
 
   const scrollTo = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-
-  const handlePDF = async () => {
-    if (pdfLoading) return
-    setPdfLoading(true)
-    try {
-      const { downloadPDF } = await import('./PDFExport')
-      await downloadPDF()
-    } catch (err) {
-      console.error('PDF generation failed:', err)
-    } finally {
-      setPdfLoading(false)
-    }
-  }
 
   return (
     <nav
@@ -88,29 +101,7 @@ export default function Nav() {
         ))}
       </div>
 
-      <button
-        onClick={handlePDF}
-        disabled={pdfLoading}
-        className="nav-pdf-only"
-        style={{
-          fontFamily: 'var(--font-syne), Syne, sans-serif',
-          fontSize: 10,
-          fontWeight: 700,
-          letterSpacing: '0.08em',
-          textTransform: 'uppercase',
-          padding: '5px 14px',
-          borderRadius: 2,
-          border: '1px solid #c0392b',
-          background: '#c0392b',
-          color: '#fff',
-          cursor: pdfLoading ? 'wait' : 'pointer',
-          flexShrink: 0,
-          opacity: pdfLoading ? 0.7 : 1,
-          transition: 'opacity 0.2s',
-        }}
-      >
-        {pdfLoading ? 'Generišem...' : 'PDF ↓'}
-      </button>
+      <PDFButton />
     </nav>
   )
 }

@@ -1,6 +1,5 @@
 'use client'
 import { Document, Page, Text, View, StyleSheet, pdf, Font } from '@react-pdf/renderer'
-import { saveAs } from 'file-saver'
 
 Font.register({
   family: 'Inter',
@@ -310,5 +309,13 @@ export const PortfolioPDF = () => (
 
 export async function downloadPDF() {
   const blob = await pdf(<PortfolioPDF />).toBlob()
-  saveAs(blob, 'milos-stamenkovic-portfolio-2025.pdf')
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = 'milos-stamenkovic-portfolio-2025.pdf'
+  a.style.display = 'none'
+  document.body.appendChild(a)
+  a.click()
+  document.body.removeChild(a)
+  setTimeout(() => URL.revokeObjectURL(url), 1000)
 }
