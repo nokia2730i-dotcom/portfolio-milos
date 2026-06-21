@@ -93,7 +93,7 @@ export default function Cover() {
           {/* Social links */}
           <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
             <a
-              href="https://www.instagram.com/konobarignite/"
+              href="https://www.instagram.com/milos.ugostitelj/"
               target="_blank"
               rel="noopener noreferrer"
               style={{

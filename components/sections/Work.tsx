@@ -99,9 +99,9 @@ const standard = [
   },
   {
     badge: 'SOCIAL MEDIA',
-    url: 'https://www.instagram.com/konobarignite/',
+    url: 'https://www.instagram.com/milos.ugostitelj/',
     bg: '#1a0f1a',
-    title: '@konobarignite',
+    title: '@milos.ugostitelj',
     sub: 'Ugostiteljstvo · Lični brend · Instagram · Short-form content',
     body: 'Instagram profil na raskrsnici ugostiteljske kulture i digitalnog marketinga. Autentičan glas koji gradi publiku u nišu ugostiteljstva — Reels, Stories, edukativni sadržaj o industriji. Lični brend izgrađen iz iskustva, ne iz teorije.',
     kpi: 'Ugostiteljski niche · Reels format · Lični brend · Instagram strategija',
