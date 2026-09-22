@@ -1,8 +1,8 @@
 'use client'
 import { useState, useEffect } from 'react'
 
-const sections = ['cover', 'about', 'services', 'work', 'canva', 'reels', 'ai', 'process', 'reviews', 'contact']
-const labels   = ['Intro', 'O meni', 'Usluge', 'Projekti', 'Canva', 'Reels', 'AI', 'Proces', 'Reference', 'Kontakt']
+const sections = ['cover', 'about', 'services', 'reels', 'work', 'canva', 'ai', 'process', 'reviews', 'contact']
+const labels   = ['Intro', 'O meni', 'Šta donosim', 'Reels', 'Projekti', 'Canva', 'AI', 'Metod', 'Reference', 'Kontakt']
 
 export default function Nav() {
   const [active, setActive] = useState('cover')
@@ -10,7 +10,9 @@ export default function Nav() {
   useEffect(() => {
     const obs = new IntersectionObserver(
       entries => entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id) }),
-      { threshold: 0.4 }
+      // uska traka u sredini ekrana: sekcija koja je preseca je aktivna.
+      // threshold 0.4 nije radio za sekcije vise od 2,5 ekrana (Projekti).
+      { threshold: 0, rootMargin: '-45% 0px -45% 0px' }
     )
     sections.forEach(id => {
       const el = document.getElementById(id)

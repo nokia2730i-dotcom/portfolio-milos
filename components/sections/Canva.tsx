@@ -4,19 +4,19 @@ import { motion } from 'framer-motion'
 const cards = [
   {
     title: 'Brand Kit',
-    body: 'Jednom napravljeno, zauvek korisno. Fontovi, boje, logo, reupotrebljivi elementi. Tvoj brend ostaje zaključan — nema više "koja je to plava boja?"',
+    body: 'Fontovi, boje, logo i reupotrebljivi elementi na jednom mestu. Nema više "koja je ono bila plava" na pola zadatka.',
   },
   {
-    title: 'Sistem Templeta',
-    body: '20–50 custom templeta. Reels, Stories, Carousel, Thumbnail. Klijent ih uređuje sam bez dizajnera.',
+    title: 'Sistem templeta',
+    body: 'Reels, Stories, carousel, thumbnail. Ko god iz tima uzme zadatak — izlazi isti vizuelni jezik.',
   },
   {
     title: 'Canva AI',
-    body: 'Magic Studio workflow. Uklanjanje pozadine, Magic Write, text-to-image. 3x brža isporuka.',
+    body: 'Magic Studio workflow: uklanjanje pozadine, Magic Write, text-to-image. Manje vremena na tehniku, više na ideju.',
   },
   {
     title: 'Video u Canvi',
-    body: 'Reels bez Premiere-a. Tranzicije, beat sync, auto-titlovi, B-roll.',
+    body: 'Reels bez Premiere-a. Tranzicije, beat sync, auto-titlovi, B-roll — dovoljno za dnevni tempo objava.',
   },
 ]
 
@@ -43,8 +43,8 @@ export default function Canva() {
             <span style={{ color: 'var(--red)' }}>sistem.</span>
           </h2>
           <p className="body-text" style={{ maxWidth: 580 }}>
-            Svako može da prevlači i pušta. Izgraditi brand sistem koji radi na 50 templeta,
-            ostaje konzistentan i stvarno štedi vreme — to je drugačija veština.
+            Svako može da prevlači i pušta. Napraviti sistem u kom više ljudi objavljuje celu
+            nedelju, a profil izgleda kao da ga je radila jedna ruka — to je drugačija veština.
           </p>
         </motion.div>
 

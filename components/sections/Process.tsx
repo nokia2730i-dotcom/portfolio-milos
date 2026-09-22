@@ -4,33 +4,33 @@ import { motion } from 'framer-motion'
 const steps = [
   {
     num: '1',
-    title: 'Otkrivanje',
-    time: '1 do 2 dana',
-    body: 'Duboko uranjanje u brend ili projekat: ciljevi, publika, konkurencija, ton. Ne diramo produkciju pre usklađivanja.',
+    title: 'Cilj i publika',
+    time: 'pre svake ideje',
+    body: 'Šta objava treba da postigne i kome se obraća. Doseg, DM-ovi, poseta profilu, prodaja — svaki cilj traži drugi format. Bez ovoga se snima naslepo.',
   },
   {
     num: '2',
-    title: 'Strategija',
-    time: '2 do 3 dana',
-    body: 'Content plan ili arhitektura aplikacije. Odobreno pre nego što se takne piksel dizajna ili linije koda.',
+    title: 'Hook i ugao',
+    time: 'prva sekunda',
+    body: 'Koji problem publika odmah prepoznaje i kojim rečima ga pogađam. Više verzija hook-a za istu ideju, pa se bira ona sa najkonkretnijim obećanjem.',
   },
   {
     num: '3',
-    title: 'Produkcija',
-    time: '3 do 7 dana',
-    body: 'Canva brand kit, video montaža, WordPress sajt ili web aplikacija. Batch produkcija za content.',
+    title: 'Produkcija u serijama',
+    time: 'batch, ne jedan po jedan',
+    body: 'Isti setup, više objava. Titlovi, pacing i zvuk po istom sistemu — zato profil ostaje konzistentan i kad tempo poraste.',
   },
   {
     num: '4',
-    title: 'Pregled',
-    time: '1 do 2 dana',
-    body: '2 runde revizija uključene. Čvrsti rokovi sa obe strane — ovo nije beskonačna petlja.',
+    title: 'Objava i CTA',
+    time: 'jedan poziv, ne dva',
+    body: 'Caption, hashtag set, vreme objave i jedan jasan sledeći korak. Dva poziva na akciju u istoj objavi dele pažnju i oba gube.',
   },
   {
     num: '5',
-    title: 'Isporuka + Optimizacija',
-    time: '',
-    body: 'Fajlovi, deploy, caption copy, hashtag strategija, raspored objava. Mesečni izveštaj na retaineru.',
+    title: 'Čitanje brojeva',
+    time: 'ulaz u sledeći krug',
+    body: 'Šta je zadržalo gledanje, šta je donelo sačuvane objave i DM-ove. Izvlačim pravilo, upisujem ga u plan — i krug počinje ponovo.',
   },
 ]
 
@@ -44,13 +44,14 @@ export default function Process() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <p className="eyebrow">Kako radim</p>
+          <p className="eyebrow">Kako radim sa sadržajem</p>
           <h2 className="section-title">
-            Bez iznenađenja. Bez ghost edita.{' '}
-            <span style={{ color: 'var(--red)' }}>Samo čista isporuka.</span>
+            Sadržaj nije inspiracija.{' '}
+            <span style={{ color: 'var(--red)' }}>To je krug koji se ponavlja.</span>
           </h2>
           <p className="body-text" style={{ maxWidth: 580 }}>
-            Svaki projekat prolazi iste 5 koraka. Jasan opseg, jasni rokovi, nula dvosmislenosti.
+            Isti put za svaki brend — od cilja do sledeće objave. Zato ne zavisi od toga da li
+            je danas bio dobar dan za ideje.
           </p>
         </motion.div>
 

@@ -4,39 +4,39 @@ import { motion } from 'framer-motion'
 const services = [
   {
     num: '01',
-    title: 'Short-form Video Produkcija',
-    body: 'Reels, TikTok, Shorts — od koncepta do isporuke. Hook dizajn, pacing, zvuk, titlovi. Sadržaj koji se prikazuje i koji se pamti.',
-    meta: '3–10 videa/nedeljno · isporuka za 48h',
+    title: 'Instagram i TikTok strategija',
+    body: 'Content plan koji polazi od cilja, ne od ideje. Ko je publika, koji problem odmah prepoznaje i koji format je zaustavlja. Ideja bez cilja je samo sadržaj.',
+    meta: 'Content plan · Kalendar objava · Format po cilju',
   },
   {
     num: '02',
-    title: 'Canva Brand Sistem',
-    body: 'Kompletan brand kit + 20–50 custom templeta. Jednom napravljeno, koristiš zauvek. Konzistencija bez dizajnera na stalnom pozivu.',
-    meta: 'Brand kit · Templeti · Stil vodič',
+    title: 'Scroll-stopping ideje i hook-ovi',
+    body: 'Hook nije naslov — to je obećanje koje prva sekunda mora da plati. Pišem više verzija za istu ideju i biram onu koja obećava najkonkretnije, pa je proveravam na publici.',
+    meta: 'Hook banka · Prekid obrasca · Testiranje na publici',
   },
   {
     num: '03',
-    title: 'AI Content Strategija',
-    body: 'Mesečni content plan uz AI — hookovi, koncepti serija, caption, analiza konkurencije. Strategija pre produkcije, uvek.',
-    meta: '30-dnevni plan · Hook banka · Caption copy',
+    title: 'Short-form produkcija',
+    body: 'Reels, TikTok i Shorts od koncepta do gotovog videa — snimanje, montaža, pacing, zvuk, titlovi. Ideja ne čeka da se neko drugi oslobodi.',
+    meta: 'Snimanje · Montaža · Titlovi · CapCut & Canva',
   },
   {
     num: '04',
-    title: 'Instagram Vizuelni Refresh',
-    body: 'Grid, Highlights, Stories sistem, bio. Jedna nedelja — profil koji izgleda 10x skuplje.',
-    meta: 'Audit profila · Grid sistem · Stories kit',
+    title: 'Analitika pretvorena u akciju',
+    body: 'Doseg, engagement i sačuvane objave nisu izveštaj — to su instrukcije za sledeću objavu. Čitam šta je zadržalo gledanje, izvlačim pravilo i upisujem ga u plan.',
+    meta: 'Insights · Šta ponoviti · Šta ukinuti',
   },
   {
     num: '05',
-    title: 'WordPress Sajtovi',
-    body: 'Profesionalni sajtovi za lokalni biznis — od nule do live. SEO osnove, blog, mobile-first dizajn.',
-    meta: 'WordPress · SEO · Blog · Canva',
+    title: 'Komunikacija sa klijentima',
+    body: 'Dve decenije za stolom sa gostom znače da umem da razgovaram sa vlasnikom, primim kritiku bez odbrane i objasnim odluku bez žargona. Klijent koji razume zašto — odobrava brže.',
+    meta: 'Brief · Prezentovanje ideje · Feedback bez drame',
   },
   {
     num: '06',
-    title: 'Web Aplikacije i Digitalni Alati',
-    body: 'Poslovni web alati deployovani na Vercelu — kalkulatori, analitički sistemi, SaaS micro-produkti za specifične industrije. Vidi: FoodCost Analiza i BizBreak.',
-    meta: 'Next.js · Vercel · React · Ugostiteljstvo & biznis',
+    title: 'Vizuelni sistemi i AI ubrzanje',
+    body: 'Canva brand kit i templeti da ceo tim objavljuje konzistentno, bez dizajnera na svakom zadatku. AI za brzinu — Claude, Suno, ElevenLabs, CapCut. Kreativna odluka ostaje ljudska.',
+    meta: 'Canva Pro · Brand kit · AI workflow',
   },
 ]
 
@@ -50,10 +50,10 @@ export default function Services() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <p className="eyebrow">Usluge</p>
+          <p className="eyebrow">Šta donosim timu</p>
           <h2 className="section-title">
-            Šest stvari koje radim{' '}
-            <span style={{ color: 'var(--red)' }}>izuzetno dobro.</span>
+            Šest stvari koje tim dobija{' '}
+            <span style={{ color: 'var(--red)' }}>prvog dana.</span>
           </h2>
         </motion.div>
 
