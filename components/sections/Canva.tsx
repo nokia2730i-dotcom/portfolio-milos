@@ -20,13 +20,6 @@ const cards = [
   },
 ]
 
-const skills = [
-  { label: 'Vizuelni dizajn i layout', pct: 95 },
-  { label: 'Arhitektura brand sistema', pct: 90 },
-  { label: 'Video i animacija', pct: 80 },
-  { label: 'Canva AI funkcije', pct: 88 },
-]
-
 export default function Canva() {
   return (
     <section id="canva" style={{ background: 'var(--paper)', padding: '80px 24px' }}>
@@ -49,7 +42,7 @@ export default function Canva() {
         </motion.div>
 
         {/* 2x2 cards */}
-        <div className="grid-2col" style={{ marginBottom: 48 }}>
+        <div className="grid-2col">
           {cards.map((c, i) => (
             <motion.div
               key={c.title}
@@ -71,45 +64,6 @@ export default function Canva() {
                 {c.title}
               </h3>
               <p style={{ fontSize: 13, lineHeight: 1.75, color: 'var(--ink-2)' }}>{c.body}</p>
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="divider" />
-
-        {/* Skill bars */}
-        <div>
-          {skills.map((s, i) => (
-            <motion.div
-              key={s.label}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              style={{ marginBottom: 18 }}
-            >
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
-                <span style={{ fontSize: 14, color: 'var(--ink)' }}>{s.label}</span>
-                <span
-                  style={{
-                    fontSize: 13,
-                    color: 'var(--ink-3)',
-                    fontFamily: 'var(--font-syne), Syne, sans-serif',
-                    fontWeight: 700,
-                  }}
-                >
-                  {s.pct}%
-                </span>
-              </div>
-              <div style={{ height: 3, background: 'var(--paper-3)', borderRadius: 2 }}>
-                <motion.div
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.9, delay: 0.3 + i * 0.1 }}
-                  style={{ height: 3, background: 'var(--ink)', borderRadius: 2, width: `${s.pct}%`, transformOrigin: 'left' }}
-                />
-              </div>
             </motion.div>
           ))}
         </div>

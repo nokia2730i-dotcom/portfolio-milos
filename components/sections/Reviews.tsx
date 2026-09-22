@@ -58,8 +58,8 @@ export default function Reviews() {
           </p>
         </motion.div>
 
-        {/* 2-col review cards */}
-        <div className="grid-2col">
+        {/* Review card (full width — jedan testimonijal) */}
+        <div>
           {[
             {
               type: 'Web projekat',
