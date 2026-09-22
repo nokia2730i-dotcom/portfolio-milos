@@ -20,7 +20,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Miloš Stamenković — Social Media Manager & Content Strateg',
   description:
-    'Portfolio: short-form video, Canva sistemi, Reels produkcija, WordPress sajtovi i web aplikacije na Vercelu. Za brendove koji znaju da je pažnja najskuplja valuta.',
+    'Instagram i TikTok strategija, short-form produkcija i analitika pretvorena u akciju. 76.705 pregleda i 660 novih pratilaca iz jedne organske objave.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
