@@ -23,9 +23,9 @@ const featured: Project[] = [
     badge: 'INSTAGRAM · CASE STUDY · FEATURED',
     url: 'https://www.instagram.com/milos.ugostitelj/',
     bg: '#0a0a0a',
-    title: '76.588 ljudi. Jedna objava. 800 razgovora.',
+    title: '76.705 pregleda. Jedna objava. 660 novih pratilaca.',
     sub: 'Organski doseg · DM strategija · Ugostiteljstvo · Bez plaćene promocije',
-    body: 'Cilj nije bio viralnost — cilj su bili razgovori sa vlasnicima restorana. Objava je pogodila problem koji svaki vlasnik prepoznaje, ponudila konkretnu vrednost i završila jednim jasnim pozivom: pošalji ključnu reč u DM. Rezultat: 76.588 dosega i 800 direktnih poruka — 800 ljudi koji su sami započeli razgovor sa brendom.',
+    body: 'Cilj nije bio viralnost — cilj je bio da sadržaj nađe ljude iz ugostiteljstva koji me još ne prate. Objava je pogodila problem koji svaki konobar prepoznaje, ponudila konkretnu vrednost i završila jednim jasnim pozivom: pošalji ključnu reč u DM. Rezultat: 76.705 pregleda, 98,7% od ljudi koji me nisu pratili, i 660 novih pratilaca — iz jedne objave, bez dinara budžeta.',
     features: [
       'Hook: "Ako si konobar — ovo moraš da imaš."',
       'Vrednost: Manifest konobara — profesionalni kodeks za vrhunsku uslugu, besplatan dokument',
@@ -33,7 +33,7 @@ const featured: Project[] = [
       'Zaključak koji primenjujem: jedan problem, jedna vrednost, jedan CTA — nikad dva poziva na akciju u istoj objavi.',
     ],
     image: '/case-76k.png',
-    kpi: '25. januar 2026 · 0 € budžeta · 800 DM',
+    kpi: '25. januar 2026 · 0 € budžeta · 344 čuvanja · 321 deljenje',
   },
   {
     badge: 'SOCIAL MEDIA',

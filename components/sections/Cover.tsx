@@ -79,8 +79,8 @@ export default function Cover() {
             }}
           >
             {[
-              ['76K', 'Doseg jedne objave'],
-              ['800+', 'DM poruka iz jedne objave'],
+              ['76K', 'Pregleda jedne objave'],
+              ['660', 'Novih pratilaca iz jedne objave'],
               ['20+', 'Godina rada sa ljudima'],
             ].map(([num, lbl]) => (
               <div key={lbl}>
