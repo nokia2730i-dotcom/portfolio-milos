@@ -18,7 +18,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Miloš Stamenković — Social Media Designer & Digital Product Builder',
+  title: 'Miloš Stamenković — Social Media Manager & Content Strateg',
   description:
     'Portfolio: short-form video, Canva sistemi, Reels produkcija, WordPress sajtovi i web aplikacije na Vercelu. Za brendove koji znaju da je pažnja najskuplja valuta.',
 }

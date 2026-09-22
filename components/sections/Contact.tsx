@@ -122,7 +122,7 @@ export default function Contact() {
             fontStyle: 'italic',
           }}
         >
-          Portfolio · Miloš Stamenković · Social Media Designer & Digital Product Builder · 2026
+          Portfolio · Miloš Stamenković · Social Media Manager & Content Strateg · 2026
         </p>
       </div>
     </section>

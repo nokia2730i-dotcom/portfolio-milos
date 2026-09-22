@@ -22,7 +22,7 @@ export default function Cover() {
     >
       <div style={{ maxWidth: 920, margin: '0 auto', width: '100%' }}>
         <motion.div {...A}>
-          <p className="eyebrow">Social Media Designer & Digital Product Builder</p>
+          <p className="eyebrow">Social Media Manager & Content Strateg</p>
 
           <h1
             style={{
