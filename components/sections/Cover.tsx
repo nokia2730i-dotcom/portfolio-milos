@@ -79,9 +79,9 @@ export default function Cover() {
             }}
           >
             {[
-              ['3+', 'Godina iskustva'],
-              ['7', 'Realizovana projekta'],
-              ['10+', 'Blog postova'],
+              ['76K', 'Doseg jedne objave'],
+              ['800+', 'DM poruka iz jedne objave'],
+              ['20+', 'Godina rada sa ljudima'],
             ].map(([num, lbl]) => (
               <div key={lbl}>
                 <div className="stat-number">{num}</div>

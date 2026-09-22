@@ -59,13 +59,8 @@ export default function Reviews() {
         </motion.div>
 
         {/* 2-col review cards */}
-        <div className="grid-2col" style={{ marginBottom: 48 }}>
+        <div className="grid-2col">
           {[
-            {
-              type: 'Digitalni alat',
-              quote: '"FoodCost Analiza reši problem koji smo godinama ignorisali."',
-              body: 'Konačno vidimo gde odlazi novac u kuhinji. Alat koji zaista razume ugostiteljstvo. — Korisnik platforme',
-            },
             {
               type: 'Web projekat',
               quote: '"Sajt je lak za ažuriranje i izgleda tačno kako smo hteli."',
@@ -107,28 +102,6 @@ export default function Reviews() {
               </p>
               <p style={{ fontSize: 13, lineHeight: 1.75, color: 'var(--ink-2)' }}>{r.body}</p>
             </motion.div>
-          ))}
-        </div>
-
-        {/* Stats */}
-        <div
-          style={{
-            display: 'flex',
-            gap: 48,
-            flexWrap: 'wrap',
-            borderTop: '1px solid var(--paper-3)',
-            paddingTop: 32,
-          }}
-        >
-          {[
-            ['100%', 'Isporuka na vreme'],
-            ['6', 'Realizovana projekta'],
-            ['70%', 'Repeat klijenti'],
-          ].map(([n, l]) => (
-            <div key={l}>
-              <div className="stat-number">{n}</div>
-              <div className="stat-label">{l}</div>
-            </div>
           ))}
         </div>
       </div>

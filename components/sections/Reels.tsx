@@ -100,9 +100,8 @@ export default function Reels() {
           }}
         >
           {[
-            ['3x', 'Iznad prosečnog watch time'],
-            ['15+', 'Reel formata'],
-            ['48h', 'Prosečna isporuka'],
+            ['76.588', 'Rekordni doseg'],
+            ['17,86%', 'Engagement na social proof sadržaju'],
           ].map(([n, l]) => (
             <div key={l}>
               <div className="stat-number">{n}</div>
