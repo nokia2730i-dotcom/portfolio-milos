@@ -26,7 +26,7 @@ export default function Cover() {
 
           <h1
             style={{
-              fontFamily: 'var(--font-syne), Syne, sans-serif',
+              fontFamily: 'var(--font-display), Cinzel, serif',
               fontWeight: 800,
               fontSize: 'clamp(36px, 7vw, 68px)',
               lineHeight: 1.1,
@@ -100,7 +100,7 @@ export default function Cover() {
                 fontSize: 11,
                 color: 'var(--ink-3)',
                 textDecoration: 'none',
-                fontFamily: 'var(--font-syne), Syne, sans-serif',
+                fontFamily: 'var(--font-display), Cinzel, serif',
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
                 fontWeight: 700,
@@ -117,7 +117,7 @@ export default function Cover() {
                 fontSize: 11,
                 color: 'var(--ink-3)',
                 textDecoration: 'none',
-                fontFamily: 'var(--font-syne), Syne, sans-serif',
+                fontFamily: 'var(--font-display), Cinzel, serif',
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
                 fontWeight: 700,

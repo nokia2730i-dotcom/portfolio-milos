@@ -54,7 +54,7 @@ export default function Reels() {
               <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
                 <span
                   style={{
-                    fontFamily: 'var(--font-syne), Syne, sans-serif',
+                    fontFamily: 'var(--font-display), Cinzel, serif',
                     fontSize: 9,
                     fontWeight: 700,
                     letterSpacing: '0.12em',
@@ -67,7 +67,7 @@ export default function Reels() {
                 </span>
                 <span
                   style={{
-                    fontFamily: 'var(--font-syne), Syne, sans-serif',
+                    fontFamily: 'var(--font-display), Cinzel, serif',
                     fontWeight: 800,
                     fontSize: 15,
                     color: f.dark ? 'var(--ink)' : '#fff',

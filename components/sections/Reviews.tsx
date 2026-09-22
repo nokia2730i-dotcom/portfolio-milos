@@ -47,7 +47,7 @@ export default function Reviews() {
           <p
             style={{
               fontSize: 9,
-              fontFamily: 'var(--font-syne), Syne, sans-serif',
+              fontFamily: 'var(--font-display), Cinzel, serif',
               fontWeight: 700,
               letterSpacing: '0.14em',
               textTransform: 'uppercase',
@@ -78,7 +78,7 @@ export default function Reviews() {
               <p
                 style={{
                   fontSize: 9,
-                  fontFamily: 'var(--font-syne), Syne, sans-serif',
+                  fontFamily: 'var(--font-display), Cinzel, serif',
                   fontWeight: 700,
                   letterSpacing: '0.14em',
                   textTransform: 'uppercase',
@@ -90,7 +90,7 @@ export default function Reviews() {
               </p>
               <p
                 style={{
-                  fontFamily: 'var(--font-syne), Syne, sans-serif',
+                  fontFamily: 'var(--font-display), Cinzel, serif',
                   fontWeight: 800,
                   fontSize: 14,
                   color: 'var(--ink)',

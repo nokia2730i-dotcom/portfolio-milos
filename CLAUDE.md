@@ -26,10 +26,17 @@ Ovo su izričite odluke vlasnika sajta, ne predlozi:
 - Reels naslov i levak: „Jedna sekunda da zaradiš sledeću. **To je brief.**"
 
 ## Dizajn sistem
-- Fontovi: Syne (700, 800) + Inter (400, 500) preko next/font/google.
-  Syne je namerno zadržan — proveravano je Montserrat i Cinzel i oboje gube:
-  Cinzel nema pravi lowercase i hero postaje verzalna pozivnica, Montserrat je
-  najkorišćeniji Google font i ubija karakter. Ne menjati bez razloga.
+- Fontovi: **Cinzel** (700, 800) za naslove + Inter (400, 500) za telo teksta,
+  preko next/font/google. CSS promenljiva je `--font-display`, fallback stack je
+  `var(--font-display), Cinzel, serif`. U kodu nema više nijedne reference na Syne.
+- **Cinzel MORA da ima `subsets: ['latin', 'latin-ext']`.** Sam `latin` ne nosi
+  č ć š ž đ — dijakritike bi padale u fallback usred reči. Provereno glif po glif:
+  svih 18 srpskih znakova se renderuje u Cinzelu.
+- Cinzel je odluka vlasnika sajta, doneta posle pregleda punog rendera, ne
+  pretpostavke. Poznata posledica koju je prihvatio: Cinzel nema mala slova
+  (sve lowercase ide u small caps), pa mikro-labele — eyebrow, badge, stat-label,
+  pilule i nav — gube kontrast prema telu teksta. To nije bug, ne "popravljati"
+  vraćanjem na sans-serif. Pre Cinzela je bio Syne (do commita ispod).
 - Ink: #0a0a0a | Ink-2: #444444 | Ink-3: #888888
 - Paper: #f7f5f1 | Paper-2: #edeae4 | Paper-3: #e2dfd8
 - Crveni akcent: #c0392b | Red-light: #f9ece9
@@ -103,7 +110,7 @@ pilula ostane zaglavljena na prethodnoj sekciji.
 ## OG tagovi / link preview
 `public/og.png` je 1200x630 kartica koja se vidi kad se link podeli na WhatsApp-u,
 LinkedIn-u ili Viberu. Napravljena je renderovanjem HTML-a u dizajn sistemu sa
-pravim Syne fontom (ne u Canvi) — ako treba promena, regenerisati istim putem,
+pravim Cinzel fontom (ne u Canvi) — ako treba promena, regenerisati istim putem,
 ne rucno u editoru slika. Nosi tri proverljive brojke, pa vazi isto pravilo kao
 za sajt: nista sto se ne moze pokazati na `case-76k.png`.
 
