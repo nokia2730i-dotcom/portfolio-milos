@@ -100,6 +100,19 @@ pilula ostane zaglavljena na prethodnoj sekciji.
 - Email: nokia2730i@gmail.com
 - Telefon: +381 64 261 4867
 
+## OG tagovi / link preview
+`public/og.png` je 1200x630 kartica koja se vidi kad se link podeli na WhatsApp-u,
+LinkedIn-u ili Viberu. Napravljena je renderovanjem HTML-a u dizajn sistemu sa
+pravim Syne fontom (ne u Canvi) — ako treba promena, regenerisati istim putem,
+ne rucno u editoru slika. Nosi tri proverljive brojke, pa vazi isto pravilo kao
+za sajt: nista sto se ne moze pokazati na `case-76k.png`.
+
+`layout.tsx` racuna apsolutni `siteUrl` preko `resolveSiteUrl()`:
+`NEXT_PUBLIC_SITE_URL` > `VERCEL_PROJECT_PRODUCTION_URL` (Vercel je sam postavlja
+u produkciji) > tvrdo upisan fallback. OG slika MORA da ima apsolutni URL, inace
+je WhatsApp i LinkedIn ne dovuku. Kad se veze sopstveni domen, postaviti
+`NEXT_PUBLIC_SITE_URL` u Vercel env, ne menjati kod.
+
 ## Engleski pandan
 `portfolio-milos-en` je isti sajt na engleskom i drži se strukturno identičnim —
 izmene prenositi u oba repoa. Pazi na format brojeva (vidi gore).
